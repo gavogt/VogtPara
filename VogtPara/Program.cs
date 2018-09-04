@@ -19,6 +19,7 @@ namespace VogtPara
 
         }
 
+        #region DisplayInfo
         /// <summary>
         /// A method that takes a generic array to loop through
         /// </summary>
@@ -33,7 +34,9 @@ namespace VogtPara
 
             }
         }
+        #endregion
 
+        #region EnumAreas
         /// <summary>
         /// The states that the company does work in
         /// </summary>
@@ -45,7 +48,12 @@ namespace VogtPara
             West_Virginia
 
         }
+        #endregion
 
+        #region DisplayArea
+        /// <summary>
+        /// Enumerate the states that the company does work in
+        /// </summary>
         public static void DisplayArea()
         {
             // Areas of work
@@ -55,5 +63,7 @@ namespace VogtPara
             }
 
         }
+        #endregion
+
     }
 }
