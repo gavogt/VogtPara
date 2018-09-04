@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
 namespace VogtPara
 {
@@ -12,14 +11,10 @@ namespace VogtPara
         static void Main(string[] args)
         {
             // Inform user of areas
-            Console.WriteLine("We do work in the following areas...");
+            Console.WriteLine("We do work in the following areas: ");
+            DisplayArea();
 
-            // Areas of work
-            foreach (var area in Enum.GetNames(typeof(AreaOfService)))
-            {
-                Console.WriteLine(area);
-            }
-
+            Console.WriteLine("\nThe following have been added: ");
             DisplayInfo("John Jacob", "Billy Carl", "Count Dracula");
 
         }
@@ -28,7 +23,7 @@ namespace VogtPara
         /// A method that takes a generic array to loop through
         /// </summary>
         /// <typeparam name="T">A generic array</typeparam>
-        /// <param name="info">Information provided</param>
+        /// <param name="info">Information provided as an unspecified amount</param>
         public static void DisplayInfo<T>(params T[] info)
         {
             // Display info on the information passed in
@@ -40,7 +35,7 @@ namespace VogtPara
         }
 
         /// <summary>
-        /// Enumerate through the states that the company does work
+        /// The states that the company does work in
         /// </summary>
         enum AreaOfService
         {
@@ -48,6 +43,16 @@ namespace VogtPara
             Delaware,
             Washington,
             West_Virginia
+
+        }
+
+        public static void DisplayArea()
+        {
+            // Areas of work
+            foreach (var area in Enum.GetNames(typeof(AreaOfService)))
+            {
+                Console.WriteLine(area);
+            }
 
         }
     }
